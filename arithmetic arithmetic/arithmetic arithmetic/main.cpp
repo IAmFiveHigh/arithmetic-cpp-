@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "SortTextHelper.h"
+#include "MaxHeap.h"
 
 using namespace std;
 
@@ -246,10 +247,23 @@ void quickSortThreeWays(T arr[], int n) {
     __quickSortThreeWays(arr, 0, n-1);
 }
 
+void testSort(int n);
+
+//MARK: - main函数
 int main(int argc, const char * argv[]) {
     
-    int n = 10000;
-    int *arr = SortTextHelper::generateRandomArray(n, 0, 10);
+//    testSort(10000);
+    
+    MaxHeap<int>  maxHeap = MaxHeap<int>(100);
+    cout<<maxHeap.isEmpty() << endl;
+    
+    return 0;
+}
+
+
+void testSort(int n) {
+
+    int *arr = SortTextHelper::generateRandomArray(n, 0, 10000);
     int *arr2 = SortTextHelper::copyIntArray(arr, n);
     int *arr3 = SortTextHelper::copyIntArray(arr, n);
     int *arr4 = SortTextHelper::copyIntArray(arr, n);
@@ -286,7 +300,6 @@ int main(int argc, const char * argv[]) {
     delete [] arr5;
     delete [] arr6;
     delete [] arr7;
-    return 0;
-}
 
+}
 

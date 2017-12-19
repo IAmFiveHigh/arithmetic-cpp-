@@ -26,6 +26,7 @@
 		352BE49E1FE7C85100BE94FE /* arithmetic arithmetic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "arithmetic arithmetic"; sourceTree = BUILT_PRODUCTS_DIR; };
 		352BE4A11FE7C85100BE94FE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		352BE4A81FE7C87500BE94FE /* SortTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortTextHelper.h; sourceTree = "<group>"; };
+		3597DAD21FE90D5400C457B5 /* MaxHeap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxHeap.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				352BE4A11FE7C85100BE94FE /* main.cpp */,
+				3597DAD21FE90D5400C457B5 /* MaxHeap.h */,
 				352BE4A81FE7C87500BE94FE /* SortTextHelper.h */,
 			);
 			path = "arithmetic arithmetic";
@@ -253,6 +255,7 @@
 				352BE4A71FE7C85100BE94FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
