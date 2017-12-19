@@ -255,7 +255,12 @@ int main(int argc, const char * argv[]) {
 //    testSort(10000);
     
     MaxHeap<int>  maxHeap = MaxHeap<int>(100);
-    cout<<maxHeap.isEmpty() << endl;
+    
+    srand(time(NULL));
+    for (int i=0; i<15; i++) {
+        maxHeap.insert(rand()%100);
+    }
+    cout<<maxHeap.size()<<endl;
     
     return 0;
 }
