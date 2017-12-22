@@ -260,7 +260,11 @@ int main(int argc, const char * argv[]) {
     for (int i=0; i<15; i++) {
         maxHeap.insert(rand()%100);
     }
-    cout<<maxHeap.size()<<endl;
+    maxHeap.testPrint();
+    
+    while (!maxHeap.isEmpty()) {
+        cout<< maxHeap.extractMax() << " ";
+    }
     
     return 0;
 }
