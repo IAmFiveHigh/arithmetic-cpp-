@@ -27,6 +27,9 @@
 		352BE4A11FE7C85100BE94FE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		352BE4A81FE7C87500BE94FE /* SortTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortTextHelper.h; sourceTree = "<group>"; };
 		3597DAD21FE90D5400C457B5 /* MaxHeap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxHeap.h; sourceTree = "<group>"; };
+		35B6C5EE200EEECB003315F6 /* SortBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortBase.h; sourceTree = "<group>"; };
+		35B6C5EF200EEF34003315F6 /* SortAdvance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAdvance.h; sourceTree = "<group>"; };
+		35B6C5F0200EF021003315F6 /* SortHeap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortHeap.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				352BE4A11FE7C85100BE94FE /* main.cpp */,
+				35B6C5F0200EF021003315F6 /* SortHeap.h */,
+				35B6C5EF200EEF34003315F6 /* SortAdvance.h */,
+				35B6C5EE200EEECB003315F6 /* SortBase.h */,
 				3597DAD21FE90D5400C457B5 /* MaxHeap.h */,
 				352BE4A81FE7C87500BE94FE /* SortTextHelper.h */,
 			);
