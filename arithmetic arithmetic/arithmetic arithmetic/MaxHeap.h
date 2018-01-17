@@ -53,6 +53,18 @@ public:
         this->capacity = capacity;
     }
     
+    MaxHeap(Item arr[], int n) {
+        data = new Item[n+1];
+        capacity = n;
+        for (int i=0; i<n; i++) {
+            data[i+1] = arr[i];
+        }
+        count = n;
+        for (int i=count/2; i>1; i--) {
+            shiftDown(i);
+        }
+    }
+    
     ~MaxHeap() {
         delete [] data;
     }
@@ -87,6 +99,7 @@ public:
         
         return ret;
     }
+    
     
 public:
     // 以树状打印整个堆结构

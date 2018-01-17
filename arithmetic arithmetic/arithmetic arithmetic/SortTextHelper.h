@@ -74,6 +74,7 @@ namespace SortTextHelper {
         
         assert( isSort(arr, n));
         cout<< sortName << " : " << double(endtime - startime) / CLOCKS_PER_SEC << " s ";
+        cout<<endl;
         
         return;
     }

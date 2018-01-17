@@ -249,22 +249,101 @@ void quickSortThreeWays(T arr[], int n) {
 
 void testSort(int n);
 
+template <typename T>
+void heapSort1(T arr[], int n) {
+    
+    MaxHeap<T> maxHeap = MaxHeap<T>(n);
+    for (int i=0; i<n; i++) {
+        maxHeap.insert(arr[i]);
+    }
+    
+    for (int i=n-1; i>=0; i--) {
+        arr[i] = maxHeap.extractMax();
+    }
+}
+
+template <typename T>
+void heapSort2(T arr[], int n) {
+    MaxHeap<T> maxHeap = MaxHeap<T>(arr, n);
+    for (int i=n-1; i>=0; i--) {
+        arr[i] = maxHeap.extractMax();
+    }
+}
+
 //MARK: - main函数
 int main(int argc, const char * argv[]) {
     
 //    testSort(10000);
     
-    MaxHeap<int>  maxHeap = MaxHeap<int>(100);
+    cout<<endl;
+    cout<<"普通乱序数组";
+    cout<<endl;
     
-    srand(time(NULL));
-    for (int i=0; i<15; i++) {
-        maxHeap.insert(rand()%100);
-    }
-    maxHeap.testPrint();
+    int n = 100000;
+    int *arr1 = SortTextHelper::generateRandomArray(n, 0, 10000);
+    int *arr2 = SortTextHelper::copyIntArray(arr1, n);
+    int *arr3 = SortTextHelper::copyIntArray(arr1, n);
+    int *arr4 = SortTextHelper::copyIntArray(arr1, n);
+    int *arr5 = SortTextHelper::copyIntArray(arr1, n);
+
+    SortTextHelper::sortTimeTest("快速排序", quickSort, arr1, n);
+    SortTextHelper::sortTimeTest("快速三路排序", quickSortThreeWays, arr2, n);
+    SortTextHelper::sortTimeTest("归并排序", mergeSort, arr3, n);
+    SortTextHelper::sortTimeTest("堆排序", heapSort1, arr4, n);
+    SortTextHelper::sortTimeTest("堆排序2", heapSort2, arr5, n);
+
     
-    while (!maxHeap.isEmpty()) {
-        cout<< maxHeap.extractMax() << " ";
-    }
+    delete [] arr1;
+    delete [] arr2;
+    delete [] arr3;
+    delete [] arr4;
+    delete [] arr5;
+    
+    cout<<endl;
+    cout<<"近乎有序数组";
+    cout<<endl;
+    
+    arr1 = SortTextHelper::generateNerlyOrderArray(n, 100);
+    arr2 = SortTextHelper::copyIntArray(arr1, n);
+    arr3 = SortTextHelper::copyIntArray(arr1, n);
+    arr4 = SortTextHelper::copyIntArray(arr1, n);
+    arr5 = SortTextHelper::copyIntArray(arr1, n);
+
+    SortTextHelper::sortTimeTest("快速排序", quickSort, arr1, n);
+    SortTextHelper::sortTimeTest("快速三路排序", quickSortThreeWays, arr2, n);
+    SortTextHelper::sortTimeTest("归并排序", mergeSort, arr3, n);
+    SortTextHelper::sortTimeTest("堆排序", heapSort1, arr4, n);
+    SortTextHelper::sortTimeTest("堆排序2", heapSort2, arr5, n);
+
+    
+    delete [] arr1;
+    delete [] arr2;
+    delete [] arr3;
+    delete [] arr4;
+    delete [] arr5;
+    
+    cout<<endl;
+    cout<<"大量重复数组";
+    cout<<endl;
+    
+    arr1 = SortTextHelper::generateRandomArray(n, 0, 10);
+    arr2 = SortTextHelper::copyIntArray(arr1, n);
+    arr3 = SortTextHelper::copyIntArray(arr1, n);
+    arr4 = SortTextHelper::copyIntArray(arr1, n);
+    arr5 = SortTextHelper::copyIntArray(arr1, n);
+
+    SortTextHelper::sortTimeTest("快速排序", quickSort, arr1, n);
+    SortTextHelper::sortTimeTest("快速三路排序", quickSortThreeWays, arr2, n);
+    SortTextHelper::sortTimeTest("归并排序", mergeSort, arr3, n);
+    SortTextHelper::sortTimeTest("堆排序", heapSort1, arr4, n);
+    SortTextHelper::sortTimeTest("堆排序2", heapSort2, arr5, n);
+
+    
+    delete [] arr1;
+    delete [] arr2;
+    delete [] arr3;
+    delete [] arr4;
+    delete [] arr5;
     
     return 0;
 }
