@@ -60,7 +60,7 @@ public:
             data[i+1] = arr[i];
         }
         count = n;
-        for (int i=count/2; i>1; i--) {
+        for (int i=count/2; i>=1; i--) {
             shiftDown(i);
         }
     }
