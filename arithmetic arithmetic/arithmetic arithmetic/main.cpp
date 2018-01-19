@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
     SortTextHelper::sortTimeTest("快速三路排序", SortAdvance::quickSortThreeWays, arr2, n);
     SortTextHelper::sortTimeTest("归并排序", SortAdvance::mergeSort, arr3, n);
     SortTextHelper::sortTimeTest("堆排序", SortHeap::heapSort1, arr4, n);
-    SortTextHelper::sortTimeTest("堆排序2", SortHeap::heapSort2, arr5, n);
+//    SortTextHelper::sortTimeTest("堆排序2", SortHeap::heapSort2, arr5, n);
 
     
     delete [] arr1;
@@ -59,7 +59,7 @@ int main(int argc, const char * argv[]) {
     SortTextHelper::sortTimeTest("快速三路排序", SortAdvance::quickSortThreeWays, arr2, n);
     SortTextHelper::sortTimeTest("归并排序", SortAdvance::mergeSort, arr3, n);
     SortTextHelper::sortTimeTest("堆排序", SortHeap::heapSort1, arr4, n);
-    SortTextHelper::sortTimeTest("堆排序2", SortHeap::heapSort2, arr5, n);
+//    SortTextHelper::sortTimeTest("堆排序2", SortHeap::heapSort2, arr5, n);
 
     
     delete [] arr1;
@@ -82,7 +82,7 @@ int main(int argc, const char * argv[]) {
     SortTextHelper::sortTimeTest("快速三路排序", SortAdvance::quickSortThreeWays, arr2, n);
     SortTextHelper::sortTimeTest("归并排序", SortAdvance::mergeSort, arr3, n);
     SortTextHelper::sortTimeTest("堆排序", SortHeap::heapSort1, arr4, n);
-    SortTextHelper::sortTimeTest("堆排序2", SortHeap::heapSort2, arr5, n);
+//    SortTextHelper::sortTimeTest("堆排序2", SortHeap::heapSort2, arr5, n);
 
     
     delete [] arr1;
